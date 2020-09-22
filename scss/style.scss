@@ -1,6 +1,5 @@
 @import 'config';
-@import 'utilities';
-@import 'buttons';
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -41,11 +40,12 @@ body {
             color: $secondary-color;
         }
     }
-    .showcase-content {
+    &-content {
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 30px;
         img {
             width: 50%;
         }
@@ -56,4 +56,6 @@ body {
         
     }
 }
-
+@import 'utilities';
+@import 'buttons';
+@import 'mobile';
