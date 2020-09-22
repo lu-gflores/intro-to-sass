@@ -2,6 +2,15 @@ $font-stack: Arial,
 Helvetica,
 sans-serif;
 $light-color: #f4f4f4;
-$primary-color: #0e6cff;
+$primary-color: #d3f0e6;
 $secondary-color: #ff8700;
 /*This is config file is used as a partial, which is to brought to another file, not compiled on its own*/
+
+//updating text color based on background color
+@function set-text-color($color) {
+    @if(lightness($color) > 70) {
+        @return #333;
+    }@else {
+        @return #fff;
+    }
+}

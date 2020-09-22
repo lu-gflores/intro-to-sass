@@ -21,7 +21,7 @@ body {
 
 .showcase {
     background-color: $primary-color;
-    color: #fff;
+    color: set-text-color($primary-color);
     height: 600px;
     /*you can nest elements that are within the class!*/
     nav {
@@ -42,7 +42,7 @@ body {
         }
     }
     a {
-        color: #fff;
+        color: set-text-color($primary-color);
     }
     .showcase-content {
         height: 100%;
