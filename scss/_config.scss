@@ -2,7 +2,7 @@ $font-stack: Arial,
 Helvetica,
 sans-serif;
 $light-color: #f4f4f4;
-$primary-color: #d3f0e6;
+$primary-color: #6292eb;
 $secondary-color: #ff8700;
 /*This is config file is used as a partial, which is to brought to another file, not compiled on its own*/
 
@@ -12,5 +12,26 @@ $secondary-color: #ff8700;
         @return #333;
     }@else {
         @return #fff;
+    }
+}
+//set background & text color
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+$spaceamounts: (1,2,3,4,5);
+@each $space in $spaceamounts {
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+
+    .p-#{$space} {
+        padding: #{$space}rem;
+    }
+    .py-#{$space} {
+        padding: #{$space}rem 0;
     }
 }

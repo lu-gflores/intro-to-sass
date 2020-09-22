@@ -20,8 +20,8 @@ body {
 }
 
 .showcase {
-    background-color: $primary-color;
-    color: set-text-color($primary-color);
+   @include set-background($primary-color);
+
     height: 600px;
     /*you can nest elements that are within the class!*/
     nav {
@@ -41,9 +41,6 @@ body {
             color: $secondary-color;
         }
     }
-    a {
-        color: set-text-color($primary-color);
-    }
     .showcase-content {
         height: 100%;
         display: flex;
@@ -56,9 +53,7 @@ body {
             font-size: 50px;
             line-height: 1.2;
         }
-        p {
-            margin: 20px 0;
-        }
+        
     }
 }
 
